@@ -1,102 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <title>form</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FORM</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
 </head>
 <body>
-    <fieldset>
-    <h2 align="center">Form Biodata</h2>
-    <form action="post" method="post">
-       <table>
-           <tr>
-               <td width="200px">NIM</td>
-               <td>:</td>
-               <td><input type="text" size="12"></td>
-           </tr>
-           <tr>
-            <td>NAMA</td>
-            <td>:</td>
-            <td><input type="text" size="30"></td>
-        </tr>
-        <tr>
-            <td>JENIS KELAMIN</td>
-            <td>:</td>
-            <td><input type="radio" name="jk"> Laki-laki
-                <input type="radio" name="jk"> Perempuan
-            </td>
-        </tr>
-        <tr>
-            <td><label for="jurusan">JURUSAN</label></td>
-            <td>:</td>
-            <td><select name="Jurusan">
-                <option value="">Pilih Jurusan</option>
-                <option value="D3SI">D3 SI</option>
-                <option value="S1RPL">S1 RPL</option>
-            </select></td>
-        </tr>
-        <tr>
-            <td>HOBBY</td>
-            <td>:</td>
-            <td>
-                <input type="checkbox">Komputer
-                <input type="checkbox">musik
-                <input type="checkbox">olahraga
-                <input type="checkbox">travelling
-            </td>
-        </tr>
-        <tr>
-            <td><label for="catatan">CATATAN</label></td>
-            <td>:</td>
-             <td><textarea required name="" id="" cols="30" rows="6"></textarea></td>
-            
-        </tr>
-        <tr>
-            <td>
-                <label for="">FOTO</label>
-            </td>
-            <td>:</td>
-            <td>
-                <input type="file">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                EMAIL
-            </td>
-            <td>:</td>
-            <td>
-                <input type="text">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                SANDI LOGIN
-            </td>
-            <td>:</td>
-            <td>
-                <input type="password">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                ULANGI SANDI LOGIN
-            </td>
-            <td>:</td>
-            <td>
-                <input type="password">
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><input type="submit" name="submit" value="Simpan"></td>
-            <td><input type="reset" value="Batal"> 
-            <input type="submit" name="Peringatan" value="Peringatan"></td>
-        </tr>
-       </table>
-       
+    <div class="container">
+    <form table action="" method="post">
+        <div class="mb-3">
+        <label for="nim">NIM</label>
+        <input required class="form-control" type="text" name="nim" id="nim" placeholder="Masukan Nim anda">
+        </div>
+
+        <div class="mb-3">
+        <label for="nama">NAMA</label>
+        <input required class="form-control" type="text" name="nama" id="nama" placeholder="Masukan Nama anda ">
+        </div>
+        
+        <div class="mb-3">
+        <label for="jk">Jenis Kelamin :</label>
+        <input type="radio" name="jk" id="jk" value="L">Laki - Laki
+        <input type="radio" name="jk" id="jk" value="P">Perempuan
+        </div>
+        
+        <div class="mb-3">
+        <label for="jurusan">Jurusan</label>
+        <select class="form-control" name="jurusan" id="jurusan">
+            <option value="">Pilih Jurusan</option>
+            <option value="S1RPL">S1 RPL</option>
+            <option selected value="S1ILKOM">S1 ILKOM </option>
+        </select>
+        </div>
+
+        <div class="mb-3 row">
+        <label for="catatan">Catatan</label>
+        <textarea name="catatan" id="catatan" cols="50" rows="3"></textarea>
+        </div>
+
+       <input type="submit" class="btn btn-primary" name="submit" value="Simpan Data">
+       <input type="reset" value="Batal" class="btn btn-warning">
     </form>
-</fieldset>
+    </div>
+     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+     
 </body>
 </html>
